@@ -5,6 +5,7 @@ import { NodeModulesPolyfillPlugin } from '@esbuild-plugins/node-modules-polyfil
 
 // https://vite.dev/config/
 export default defineConfig({
+  base: '/CoPilot_Playgroud/',
   plugins: [react()],
   optimizeDeps: {
     esbuildOptions: {
