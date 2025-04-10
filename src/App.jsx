@@ -81,7 +81,7 @@ const App = () => {
       <FlyingSaucer />
       <FloatingShapes />
       <ChaseAnimation />
-      <h1 className="title">AI Programmed This</h1>
+      <h1 className="title">AI Randomness Development</h1>
       <div className="grid-container">
         {gridItems.map((item, index) => (
           <div

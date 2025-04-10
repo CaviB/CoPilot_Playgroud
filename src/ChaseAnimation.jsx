@@ -22,7 +22,10 @@ const ChaseAnimation = () => {
                 const rotation = Math.random() * 360; // Add random rotation
                 const scale = 0.5 + Math.random() * 1.5; // Dynamically scale between 0.5 and 2.0
 
-                element.style.transform = `translate(${x}px, ${y}px) rotate(${rotation}deg) scale(${scale})`;
+                const directionX = Math.random() < 0.5 ? -1 : 1; // Random direction for X
+                const directionY = Math.random() < 0.5 ? -1 : 1; // Random direction for Y
+
+                element.style.transform = `translate(${x * directionX}px, ${y * directionY}px) rotate(${rotation}deg) scale(${scale})`;
             });
         };
 
@@ -173,7 +176,45 @@ const ChaseAnimation = () => {
                     className="chase-character saucer"
                 />
             ))}
+            <FullScreenUFO />
         </div>
+    );
+};
+
+const FullScreenUFO = () => {
+    const ufoRef = useRef(null);
+
+    useEffect(() => {
+        const ufo = ufoRef.current;
+        if (!ufo) return;
+
+        ufo.style.transform = 'scale(0)';
+        ufo.style.transition = 'transform 2s ease-in-out';
+
+        setTimeout(() => {
+            ufo.style.transform = 'scale(1)';
+        }, 500);
+
+        setTimeout(() => {
+            ufo.style.transform = 'scale(0)';
+        }, 3000);
+    }, []);
+
+    return (
+        <img
+            ref={ufoRef}
+            src={saucerSvg}
+            alt="Full Screen UFO"
+            style={{
+                position: 'absolute',
+                top: '50%',
+                left: '50%',
+                transform: 'translate(-50%, -50%)',
+                width: '100vw',
+                height: '100vh',
+                zIndex: 10,
+            }}
+        />
     );
 };
 
