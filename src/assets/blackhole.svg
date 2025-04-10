@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+    <circle cx="100" cy="100" r="80" fill="black" />
+    <circle cx="100" cy="100" r="60" fill="darkgray" />
+    <circle cx="100" cy="100" r="40" fill="gray" />
+    <circle cx="100" cy="100" r="20" fill="lightgray" />
+    <circle cx="30" cy="30" r="5" fill="brown" />
+    <circle cx="170" cy="50" r="7" fill="darkred" />
+    <circle cx="50" cy="170" r="6" fill="gold" />
+    <circle cx="150" cy="150" r="4" fill="silver" />
+    <circle cx="80" cy="40" r="3" fill="orange" />
+</svg>

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './App.css';
 import FloatingShapes from './FloatingShapes';
 import FlyingSaucer from './FlyingSaucer';
+import ChaseAnimation from './ChaseAnimation';
 
 const App = () => {
   const gridSize = 16;
@@ -79,6 +80,7 @@ const App = () => {
     <>
       <FlyingSaucer />
       <FloatingShapes />
+      <ChaseAnimation />
       <h1 className="title">AI Programmed This</h1>
       <div className="grid-container">
         {gridItems.map((item, index) => (

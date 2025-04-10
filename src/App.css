@@ -49,6 +49,8 @@
   grid-template-columns: repeat(16, 1fr);
   grid-template-rows: repeat(16, 1fr);
   gap: 2px;
+  position: relative;
+  z-index: 1;
 }
 
 .grid-item {
@@ -79,4 +81,12 @@
 .grid-item.dragging {
   background-color: #ffcccb;
   /* Change color when being dragged */
+}
+
+.chase-character {
+  z-index: 2;
+}
+
+body {
+  overflow: hidden;
 }
